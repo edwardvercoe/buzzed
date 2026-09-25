@@ -6,6 +6,7 @@
   "main": ".vite/build/main.js",
   "private": true,
   "scripts": {
+    "assets:icns": "node scripts/create-icns.mjs",
     "start": "electron-forge start",
     "package": "electron-forge package --platform=darwin --arch=arm64",
     "make": "electron-forge make --platform=darwin --arch=arm64",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@electron-forge/cli": "latest",
+    "@electron-forge/maker-dmg": "^7.11.2",
     "@electron-forge/maker-zip": "latest",
     "@electron-forge/plugin-fuses": "latest",
     "@electron-forge/plugin-vite": "latest",

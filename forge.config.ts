@@ -1,4 +1,5 @@
 import type { ForgeConfig } from '@electron-forge/shared-types';
+import { MakerDMG } from '@electron-forge/maker-dmg';
 import { MakerZIP } from '@electron-forge/maker-zip';
 import { FusesPlugin } from '@electron-forge/plugin-fuses';
 import { VitePlugin } from '@electron-forge/plugin-vite';
@@ -10,13 +11,36 @@ const config: ForgeConfig = {
     name: 'Buzzed',
     appBundleId: 'com.personal.buzzed',
     appCategoryType: 'public.app-category.utilities',
+    icon: './build/Buzzed.icns',
     extendInfo: {
       LSUIElement: true,
     },
     extraResource: ['assets'],
   },
   rebuildConfig: {},
-  makers: [new MakerZIP({}, ['darwin'])],
+  makers: [
+    new MakerDMG(
+      {
+        name: 'Buzzed',
+        background: './build/dmg-background.png',
+        icon: './build/Buzzed.icns',
+        iconSize: 96,
+        format: 'ULFO',
+        overwrite: true,
+        contents: (options) => [
+          { x: 190, y: 270, type: 'file', path: options.appPath },
+          { x: 468, y: 270, type: 'link', path: '/Applications' },
+        ],
+        additionalDMGOptions: {
+          window: {
+            size: { width: 658, height: 498 },
+          },
+        },
+      },
+      ['darwin'],
+    ),
+    new MakerZIP({}, ['darwin']),
+  ],
   plugins: [
     new VitePlugin({
       build: [

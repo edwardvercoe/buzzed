@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="658" height="498" viewBox="0 0 658 498">
+  <defs>
+    <linearGradient id="background" x1="34" y1="18" x2="624" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF7F0"/>
+      <stop offset="1" stop-color="#EBDAC5"/>
+    </linearGradient>
+    <linearGradient id="arrow" x1="275" y1="0" x2="397" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C97842"/>
+      <stop offset="1" stop-color="#9E4D2D"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="658" height="498" fill="url(#background)"/>
+  <circle cx="46" cy="455" r="145" fill="#FFFFFF" opacity=".3"/>
+  <circle cx="632" cy="25" r="122" fill="#C97842" opacity=".07"/>
+
+  <g transform="translate(273 33)">
+    <path d="M0 18H78V64C78 88 59 107 35 107C16 107 0 91 0 72V18Z" fill="#B55D35"/>
+    <path d="M76 33H92C107 33 119 45 119 60C119 75 107 87 92 87H76V72H92C99 72 104 67 104 60C104 53 99 48 92 48H76V33Z" fill="#B55D35"/>
+    <ellipse cx="39" cy="18" rx="39" ry="12" fill="#E7A86A"/>
+    <path d="M24 4C13-9 31-15 20-29M48 4C37-9 55-15 44-29" fill="none" stroke="#B55D35" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <text x="329" y="171" text-anchor="middle" fill="#3A2921" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="700">Install Buzzed</text>
+  <text x="329" y="202" text-anchor="middle" fill="#70594C" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15">Drag Buzzed into your Applications folder</text>
+
+  <path d="M279 270H382" stroke="url(#arrow)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M370 252L392 270L370 288" fill="none" stroke="#9E4D2D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="329" y="420" text-anchor="middle" fill="#8A7467" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Once copied, open Buzzed from Applications.</text>
+</svg>
