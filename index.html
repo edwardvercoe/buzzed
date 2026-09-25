@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set a Buzzed timer</title>
+  </head>
+  <body>
+    <main>
+      <h1>Custom timer</h1>
+      <p>Keep your Mac awake for:</p>
+
+      <form id="timer-form" novalidate>
+        <div class="duration-fields">
+          <label>
+            <span>Hours</span>
+            <input id="hours" name="hours" type="number" inputmode="numeric" min="0" max="24" step="1" value="0" autofocus />
+          </label>
+          <label>
+            <span>Minutes</span>
+            <input id="minutes" name="minutes" type="number" inputmode="numeric" min="0" max="59" step="1" value="30" />
+          </label>
+        </div>
+
+        <p id="error" class="error" role="alert" aria-live="polite"></p>
+
+        <div class="actions">
+          <button id="cancel" type="button" class="secondary">Cancel</button>
+          <button id="start" type="submit" class="primary">Start Timer</button>
+        </div>
+      </form>
+    </main>
+    <script type="module" src="/src/renderer.ts"></script>
+  </body>
+</html>

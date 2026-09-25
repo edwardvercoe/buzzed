@@ -1,0 +1,28 @@
+{
+  "name": "buzzed",
+  "productName": "Buzzed",
+  "version": "1.0.0",
+  "description": "A minimal macOS menu bar app that keeps your Mac awake.",
+  "main": ".vite/build/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package --platform=darwin --arch=arm64",
+    "make": "electron-forge make --platform=darwin --arch=arm64",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "latest",
+    "@electron-forge/maker-zip": "latest",
+    "@electron-forge/plugin-fuses": "latest",
+    "@electron-forge/plugin-vite": "latest",
+    "@electron/fuses": "latest",
+    "@types/node": "latest",
+    "electron": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  }
+}
